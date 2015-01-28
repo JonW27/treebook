@@ -5,10 +5,23 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+	<style>
+	</style>
 </head>
 <body>
-
+	<nav class="navbar navbar-inverse navbar-fixed-top" style="background:black; margin:0 auto;">
+		<div class="navbar-inner">
+			<div class="container">
+				<a class="navbar-brand" href="#" style="font-weight:200;">Treebook</a>
+				 <ul class="nav navbar-nav">
+            <li class="active"><%= link_to "All Statuses", statuses_path %></li>
+            <li><a href="#contact">About</a></li>
+          </ul>
+			</div>	
+		</div>	
+	</nav>	
+<div class="container" style="padding-top:40px;">	
 <%= yield %>
-
+</div>
 </body>
 </html>
